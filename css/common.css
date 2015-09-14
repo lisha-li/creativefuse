@@ -1,0 +1,197 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	background: rgb(109,155,142);
+	color: white;
+}
+header{
+	position: absolute;
+	background: rgb(88,132,119);
+	height: 13%;
+	width: 100%;
+}
+
+
+a:link {
+    color: white;
+	text-decoration: none;
+}
+a:visited {
+    color: white;
+	text-decoration: none;
+}
+a:hover {
+    color: #def;
+	text-decoration: none;
+}
+a:active {
+    color: white;
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+
+li {
+	display: inline-block;
+}
+
+label > input{ /* HIDE RADIO */
+	display:none;
+}
+label > input + img{ /* IMAGE STYLES */
+	cursor:pointer;
+	border:5px solid transparent;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 20px;
+}
+label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
+	border:5px solid rgb(88,132,119);
+}
+
+.title {
+	text-align: center;
+	position: relative;
+	top: 20%;
+}
+
+.page{
+	position: absolute;
+	top: 5%;
+	height: 100%;
+	width: 100%;
+	visibility: hidden;
+}
+
+#instruction {
+	position: relative;
+	margin: 0 auto;
+	top: 20%;
+	width: 80%;
+	height: 60%;
+}
+
+#howTo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	height: 80%;
+	width: 80%;
+}
+
+.button {
+	text-transform: capitalize;
+	text-align: center;
+	border: 2px solid white;
+	background: rgb(215,119,104);
+	border-radius: 10px;
+	color: white;
+}
+#startWrapper {
+	text-align: center;
+	position: relative;
+	top: 22%;
+}
+
+#start {
+	width: 300px;
+	height: 70px;
+	font-size: 34px;
+}
+
+#cancel {
+	position: absolute;
+	left: 90%;
+	top: 5%;
+	width: 100px;
+	height: 100px;
+}
+#cancel img{
+	height: 50px;
+	width: 50px;
+}
+#cancel h6{
+	margin-top: -10px;
+}
+
+#B1, #B2, #B3, #C1, #C2, #C3, #submit {
+	width: 100px;
+	height: 50px;
+	font-size: 18px;
+	position: relative;
+	margin: 5px;
+}
+
+#buttWrap {
+	position: absolute;
+	top: 65%;
+	left: 70%;
+}
+
+#your_fuse {
+	position: relative;
+	top: 75%;
+	width: 80%;
+	margin: 0 auto;
+	visibility: visible;
+	height: 20%;
+}
+.fuse_list {
+	position: relative;
+	left: 10%;
+}
+.fuse_text{
+	position: absolute;
+	top: 10%;
+}
+
+#plus {
+	position: absolute;
+	top:30%;
+}
+#hidePlus {
+	position: absolute;
+	top:30%;
+	visibility: hidden;
+}
+#message {
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	top: 20%;
+	width: 80%;
+	height: 60%;
+}
+
+#message img {
+	width: 150px;
+	height: 150px;
+}
+#drinkname {
+	display: block;
+	margin: 0 auto;
+}
+#winFuse {
+	position: relative;
+}
+
+.circle{
+	width:200px;
+	height:200px;
+	border-radius:120px;
+	font-size:24px;
+	color:rgb(88,132,119);
+	text-align:center;
+	background:white;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 10px;
+}
+
+#circleWrap{
+	position: absolute;
+	top: 31%;
+	left: 44.5%;
+}

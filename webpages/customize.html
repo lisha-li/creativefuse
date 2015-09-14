@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creative Fuse</title>
+		<link rel = "stylesheet" href = "../css/common.css" />
+		<link rel = "stylesheet" href = "../css/radmenu.css" />
+		
+		<script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
+		<script type='text/javascript' src="../scripts/jQuery.radmenu.min.js"></script>
+	
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery("#radial_container,#radial_container2,#radial_container3,#radial_container4").radmenu({
+					listClass: 'list', // the list class to look within for items
+					itemClass: 'item', // the items - NOTE: the HTML inside the item is copied into the menu item
+					radius: 250, // radius in pixels
+					animSpeed:400, // animation speed in millis
+					centerX: 0, // the center x axis offset
+					centerY: 0, // the center y axis offset
+					selectEvent: "click", // the select event (click)
+					onSelect: function($selected){ // show what is returned 
+						if ($(".fuse_list li").length) {
+							$(".fuse_list").append("<li>"+$selected.html()+"<h1 id='plus'>+</h1></li>");
+							}
+						else {$(".fuse_list").append("<li>"+$selected.html()+"<h1 id='hidePlus'>+</h1></li>");
+						}
+						$(".fuse_list img").css("visibility","visible");
+					},
+					angleOffset: 0 // in degrees
+				});
+			
+				addEventListener('load',
+					function(){
+						jQuery("#radial_container,#radial_container2,#radial_container3,#radial_container4").radmenu("show");
+					},
+				false);
+			
+				$(".fuse_list").on('click', 'li', function() {
+					$(this).remove();
+				});
+			});
+			
+			var currentLayer = 'page1';
+			function showLayer(lyr){
+				hideLayer(currentLayer);
+				document.getElementById(lyr).style.visibility = 'visible';
+				currentLayer = lyr;
+			}
+
+			function hideLayer(lyr){
+				document.getElementById(lyr).style.visibility = 'hidden';
+			}
+			
+			function showValues(form){
+				var fuse = $(".fuse_list").html();
+				var value = [];
+				$(".fuse_list li").each(function(i, elem){
+					value.push($(elem).text());
+					});
+				var mojito = 'Vodka+,Gin+,Soda+,Lime+';
+				if (value == mojito){
+					window.location = 'winCombo.html?drink=' + fuse;
+				}
+				else {
+					window.location = 'newCombo.html?drink=' + fuse;
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<header>
+			<h1 class="title">Create your Fuse</h2>
+			<div id="cancel" onClick="window.location.href='../index.html'">
+				<img src="../graphics/Icons/noun_138152_cc.png">
+				<h6>CANCEL</h6>
+			</div>
+		</header>
+		
+		<form id="multiForm" method="POST" action="javascript:void(0)" onSubmit="showValues(this)">
+			<div id="page1" class="page" style="visibility:visible;">
+				<div id='radial_container'>
+					<ul class='list'>
+						<li class='item'><div id="vodka"><img src="../graphics/Vodka/Vodka circle 2.png"><p>Vodka</p></div></li>
+						<li class='item'><div id="vodka"><img src="../graphics/Vodka/Vodka circle 2.png"><p>Vodka</p></div></li>
+						<li class='item'><div id="vodka"><img src="../graphics/Vodka/Vodka circle 2.png"><p>Vodka</p></div></li>
+						<li class='item'><div id="vodka"><img src="../graphics/Vodka/Vodka circle 2.png"><p>Vodka</p></div></li>
+						<li class='item'><div id="vodka"><img src="../graphics/Vodka/Vodka circle 2.png"><p>Vodka</p></div></li>
+						<li class='item'><div id="vodka"><img src="../graphics/Vodka/Vodka circle 2.png"><p>Vodka</p></div></li>
+					</ul>
+				</div >
+				<div id="circleWrap">
+					<div class="circle">Please choose a spirit</div>
+				</div>
+				<div id="buttWrap">
+					<input type="button" id="C1" class="button" value="NEXT >" onClick="showLayer('page2')">
+				</div>
+			</div>
+			<div id="page2" class="page">
+				<div id='radial_container2'>
+					<ul class='list'>
+						<li class='item'><div id="gin"><img src="../graphics/Gin/Gin circle 2.png"><p>Gin</p></div></li>
+						<li class='item'><div id="gin"><img src="../graphics/Gin/Gin circle 2.png"><p>Gin</p></div></li>
+						<li class='item'><div id="gin"><img src="../graphics/Gin/Gin circle 2.png"><p>Gin</p></div></li>
+						<li class='item'><div id="gin"><img src="../graphics/Gin/Gin circle 2.png"><p>Gin</p></div></li>
+						<li class='item'><div id="gin"><img src="../graphics/Gin/Gin circle 2.png"><p>Gin</p></div></li>
+						<li class='item'><div id="gin"><img src="../graphics/Gin/Gin circle 2.png"><p>Gin</p></div></li>
+					</ul>
+				</div >
+				<div id="circleWrap">
+					<div class="circle">Please choose an enhancing alcohol</div>
+				</div>
+				<div id="buttWrap">
+					<input type="button" id="B1" class="button" value="< BACK" onClick="showLayer('page1')"><input type="button" id="C2" class="button" value="NEXT >" onClick="showLayer('page3')">
+				</div>
+			</div>
+			<div id="page3" class="page">
+				<div id='radial_container3'>
+					<ul class='list'>
+						<li class='item'><div id="soda"><img src="../graphics/Soda/Soda circle 2.png"><p>Soda</p></div></li>
+						<li class='item'><div id="soda"><img src="../graphics/Soda/Soda circle 2.png"><p>Soda</p></div></li>
+						<li class='item'><div id="soda"><img src="../graphics/Soda/Soda circle 2.png"><p>Soda</p></div></li>
+						<li class='item'><div id="soda"><img src="../graphics/Soda/Soda circle 2.png"><p>Soda</p></div></li>
+						<li class='item'><div id="soda"><img src="../graphics/Soda/Soda circle 2.png"><p>Soda</p></div></li>
+						<li class='item'><div id="soda"><img src="../graphics/Soda/Soda circle 2.png"><p>Soda</p></div></li>
+					</ul>
+				</div >
+				<div id="circleWrap">
+					<div class="circle">Please choose a sweetener</div>
+				</div>
+				<div id="buttWrap">
+					<input type="button" id="B2" class="button" value="< BACK" onClick="showLayer('page2')"><input type="button" id="C3" class="button" value="NEXT >" onClick="showLayer('page4')">
+				</div>
+			</div>
+			<div id="page4" class="page">
+				<div id='radial_container4'>
+					<ul class='list'>
+						<li class='item'><div id="lime"><img src="../graphics/Lime/Lime circle 2.png"><p>Lime</p></div></li>
+						<li class='item'><div id="lime"><img src="../graphics/Lime/Lime circle 2.png"><p>Lime</p></div></li>
+						<li class='item'><div id="lime"><img src="../graphics/Lime/Lime circle 2.png"><p>Lime</p></div></li>
+						<li class='item'><div id="lime"><img src="../graphics/Lime/Lime circle 2.png"><p>Lime</p></div></li>
+						<li class='item'><div id="lime"><img src="../graphics/Lime/Lime circle 2.png"><p>Lime</p></div></li>
+						<li class='item'><div id="lime"><img src="../graphics/Lime/Lime circle 2.png"><p>Lime</p></div></li>
+					</ul>
+				</div >
+				<div id="circleWrap">
+					<div class="circle">Please choose a fruit or herb</div>
+				</div>
+				<div id="buttWrap">
+					<input type="button" id="B3" class="button" value="< BACK" onClick="showLayer('page3')"><input type="submit" value="SUBMIT" id="submit" class="button">
+				</div>
+			</div>
+		</form>
+		
+		<section id="your_fuse">
+			<h3 class="fuse_text">YOUR FUSE:</h3>
+			<ul class="fuse_list">
+
+			</ul>
+		</section>
+		
+	</body>
+</html>
