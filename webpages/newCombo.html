@@ -21,6 +21,10 @@
 				newUrl = newUrl.replaceAll("<p>Soda</p>", " ");
 				newUrl = newUrl.replaceAll("<p>Lime</p>", " ");
 				$("#winFuse").append(newUrl);
+				
+				$("#nameButton").click(function(){
+					$("#newDrinkName").text($('#drinkname').val());
+				});
 			});
 		</script>
 	</head>
@@ -37,12 +41,16 @@
 		<section id="message">
 			<h2>CONGRATULATIONS!</h2>
 			<h3>You have fused a new creation! Choose any drink from our list as a reward! Maybe name and/or share it on social media too?</h3>
-			<h3>Your Fuse:</h3>
 			<ul id="winFuse">
+				<li><h3>Your Fuse:</h3></li>
 				
 			</ul>
-			<img id="mojito" src="../graphics/New drink.png"></img>			
-			<input type="text" id="drinkname">
+			<h3 id="newDrinkName">???</h3>
+			<img class="drinkImg" src="../graphics/New drink.png"></img>	
+			<div id="named">
+				<input type="text" id="drinkname" value="">
+				<button id="nameButton"><img src="../graphics/Icons/noun_130917.png"></button>
+			</div>
 		</section>
 		
 		<section id="startWrapper">

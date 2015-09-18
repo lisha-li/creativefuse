@@ -20,9 +20,9 @@
 					selectEvent: "click", // the select event (click)
 					onSelect: function($selected){ // show what is returned 
 						if ($(".fuse_list li").length) {
-							$(".fuse_list").append("<li>"+$selected.html()+"<h1 id='plus'>+</h1></li>");
+							$(".fuse_list").append("<li>"+$selected.html()+"<h1 class='plus'>+</h1></li>");
 							}
-						else {$(".fuse_list").append("<li>"+$selected.html()+"<h1 id='hidePlus'>+</h1></li>");
+						else {$(".fuse_list").append("<li>"+$selected.html()+"<h1 class='hidePlus'>+</h1></li>");
 						}
 						$(".fuse_list img").css("visibility","visible");
 					},
