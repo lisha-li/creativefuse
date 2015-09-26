@@ -6,27 +6,20 @@
 	width: 0;
 	text-align:center;
 }
-.radial_div_item.active #vodka { 
-	background:url('../graphics/Vodka/Selected Vodka circle 2.png');
-}
-.radial_div_item.active #vodka img, p{ 
+.radial_div_item.active img, label{
 	visibility: hidden;
+}
+.radial_div_item.active #i1 { 
+	background:url('../graphics/Ingredients/1b.png');
 }
 .radial_div_item.active #gin { 
 	background:url('../graphics/Gin/Selected Gin circle 2.png');
 }
-.radial_div_item.active #gin img, p{ 
- 	visibility: hidden;
-}
+
 .radial_div_item.active #soda {
 	background:url('../graphics/Soda/Selected Soda circle 2.png');
 }
-.radial_div_item.active #soda img, p{
-	visibility: hidden;
-}
+
 .radial_div_item.active #lime{
 	background:url('../graphics/Lime/Selected Lime circle 2.png');
-}
-.radial_div_item.active #lime img, p{
-	visibility: hidden;
 }

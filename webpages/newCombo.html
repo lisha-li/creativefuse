@@ -9,18 +9,18 @@
 		
 		<script type="text/javascript">
 			$(document).ready(function(){
-				String.prototype.replaceAll = function(str1, str2, ignore){
-					return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
-				} 
-
 				var url = window.location.href;
-				var codedUrl = url.split('drink=');
-				var decodedUrl = decodeURIComponent(codedUrl[1]);
-				var newUrl = decodedUrl.replaceAll("<p>Vodka</p>", " ");
-				newUrl = newUrl.replaceAll("<p>Gin</p>", " ");
-				newUrl = newUrl.replaceAll("<p>Soda</p>", " ");
-				newUrl = newUrl.replaceAll("<p>Lime</p>", " ");
-				$("#winFuse").append(newUrl);
+				var data = url.split('drink=');
+				data = data[1].split('&combo=');
+				var combo = data[1].split(',');
+				for(i = 0; i< combo.length; ++i){
+					if ($("#winFuse li").length) {
+						$("#winFuse").append("<li><h3 class='plus'>+</h3></li><li><img src='../graphics/Ingredients/"+combo[i]+".png'></li>");
+						}
+					else {
+						$("#winFuse").append("<li><img src='../graphics/Ingredients/"+combo[i]+".png'></li>");
+					}
+				}
 				
 				$("#nameButton").click(function(){
 					$("#newDrinkName").text($('#drinkname').val());
@@ -33,8 +33,7 @@
 		<header>
 			<h1 class="title">Create your Fuse</h2>
 			<div id="cancel" onClick="window.location.href='../index.html'">
-				<img src="../graphics/Icons/noun_138152_cc.png">
-				<h6>CANCEL</h6>
+				<img src="../graphics/Icons/cancel.png">
 			</div>
 		</header>
 		
@@ -42,7 +41,7 @@
 			<h2>CONGRATULATIONS!</h2>
 			<h3>You have fused a new creation! Choose any drink from our list as a reward! Maybe name and/or share it on social media too?</h3>
 			<ul id="winFuse">
-				<li><h3>Your Fuse:</h3></li>
+				<h3>Your Fuse:</h3>
 				
 			</ul>
 			<h3 id="newDrinkName">???</h3>
