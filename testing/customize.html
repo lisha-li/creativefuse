@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creative Fuse</title>
+		<link rel = "stylesheet" href = "css/common.css" />
+		<link rel = "stylesheet" href = "css/radmenu.css" />
+		
+		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+		<script type='text/javascript' src="scripts/jQuery.radmenu.min.js"></script>
+		<script type='text/javascript' src="scripts/thegame.js"></script>
+		<script type='text/javascript' src="scripts/cancel.js"></script>
+	</head>
+	
+	<body>
+		<header>
+			<h1 class="title"><img src="graphics/Icons/logo.png" /></h2>
+			<div id="cancel">
+				<img src="graphics/Icons/Cancel.png">
+			</div>
+		</header>
+		
+		<form id="multiForm" method="POST" action="javascript:void(0)">
+			<div id="page1" class="page" style="visibility:visible;">
+				<div id='radial_container'>
+					<ul class='list'>
+						<li class='item'><div id="i0"><img src="graphics/Ingredients/0.png"><input class='ingredient' value='0'></div></li>
+						<li class='item'><div id="i1"><img src="graphics/Ingredients/1.png"><input class='ingredient' value='1'></div></li>
+						<li class='item'><div id="i2"><img src="graphics/Ingredients/2.png"><input class='ingredient' value='2'></div></li>
+						<li class='item'><div id="i3"><img src="graphics/Ingredients/3.png"><input class='ingredient' value='3'></div></li>
+						<li class='item'><div id="i4"><img src="graphics/Ingredients/4.png"><input class='ingredient' value='4'></div></li>
+						<li class='item'><div id="i5"><img src="graphics/Ingredients/5.png"><input class='ingredient' value='5'></div></li>
+						<li class='item'><div id="i6"><img src="graphics/Ingredients/6.png"><input class='ingredient' value='6'></div></li>
+						<li class='item'><div id="i7"><img src="graphics/Ingredients/7.png"><input class='ingredient' value='7'></div></li>
+					</ul>
+				</div >
+				<div id="circleWrap">
+					<img src="graphics/Icons/circle.png" />
+					<div class="circle">Please choose your liquor/s</div>
+				</div>
+				<div id="buttNext">
+					<img id="C1" src="graphics/Icons/next.png" />
+				</div>
+			</div>
+			<div id="page2" class="page">
+				<div id='radial_container2'>
+					<ul class='list'>
+						<li class='item'><div id="i8"><img src="graphics/Ingredients/8.png"><input class='ingredient' value='8'></div></li>
+						<li class='item'><div id="i9"><img src="graphics/Ingredients/9.png"><input class='ingredient' value='9'></div></li>
+						<li class='item'><div id="i10"><img src="graphics/Ingredients/10.png"><input class='ingredient' value='10'></div></li>
+						<li class='item'><div id="i11"><img src="graphics/Ingredients/11.png"><input class='ingredient' value='11'></div></li>
+						<li class='item'><div id="i12"><img src="graphics/Ingredients/12.png"><input class='ingredient' value='12'></div></li>
+						<li class='item'><div id="i13"><img src="graphics/Ingredients/13.png"><input class='ingredient' value='13'></div></li>
+						<li class='item'><div id="i14"><img src="graphics/Ingredients/14.png"><input class='ingredient' value='14'></div></li>
+						<li class='item'><div id="i15"><img src="graphics/Ingredients/15.png"><input class='ingredient' value='15'></div></li>
+					</ul>
+				</div >
+				<div id="circleWrap">
+					<img src="graphics/Icons/circle.png" />
+					<div class="circle">Please choose your mixer/s</div>
+				</div>
+				<div id="buttBack">
+					<img id="B1" src="graphics/Icons/back.png" />
+				</div>
+				<div id="buttNext">
+					<img id="C2" src="graphics/Icons/next.png" />
+				</div>
+			</div>
+			<div id="page3" class="page">
+				<div id='radial_container3'>
+					<ul class='list'>
+						<li class='item'><div id="i16"><img src="graphics/Ingredients/16.png"><input class='ingredient' value='16'></div></li>
+						<li class='item'><div id="i17"><img src="graphics/Ingredients/17.png"><input class='ingredient' value='17'></div></li>
+						<li class='item'><div id="i18"><img src="graphics/Ingredients/18.png"><input class='ingredient' value='18'></div></li>
+						<li class='item'><div id="i19"><img src="graphics/Ingredients/19.png"><input class='ingredient' value='19'></div></li>
+						<li class='item'><div id="i20"><img src="graphics/Ingredients/20.png"><input class='ingredient' value='20'></div></li>
+						<li class='item'><div id="i21"><img src="graphics/Ingredients/21.png"><input class='ingredient' value='21'></div></li>
+						<li class='item'><div id="i22"><img src="graphics/Ingredients/22.png"><input class='ingredient' value='22'></div></li>
+					</ul>
+				</div >
+				<div id="circleWrap">
+					<img src="graphics/Icons/circle.png" />
+					<div class="circle">Please choose your mixer/s</div>
+				</div>
+				<div id="buttBack">
+					<img id="B2" src="graphics/Icons/back.png" />
+				</div>
+				<div id="buttNext">
+					<img id="fuse" src="graphics/Icons/next.png" />
+				</div>
+			</div>
+		</form>
+		
+		<section id="your_fuse">
+			<h3 class="fuse_text">YOUR FUSE:</h3>
+			<ul class="fuse_list">
+
+			</ul>
+		</section>
+		
+		
+		<form class="popupbox" id="popupCancel">
+			<h2 class="popupText">Are you sure you want to cancel the game and return to the main menu?</h3>
+			<input  id="page" type="hidden" name="page" value="0" checked/><br/>
+			<input type="button" id="popupNo" class="popupButton" value="NO">
+			<input type="submit" id="popupYes" class="popupButton" value="YES">
+		</form>
+		
+		<div class="popupbox" id="popupError">
+			<h2 class="popupText">You can't submit an empty or single ingredient fuse! Please pick at least 2 ingredients.</h3>
+			<input type="button" id="popupOk" class="popupButton" value="OK :(">
+		</div>
+		
+		<div class="popupFuse" id="popupNew">
+			<h2>CONGRATULATIONS!</h2>
+			<h3>You have fused a new creation!</h3>
+			<img class="drinkImg" src="graphics/New drink.png"></img>	
+			<ul id="newFuse">
+					
+			</ul>
+			<input type="button" id="popupNewOk" class="popupNewButton" value="OK">
+		</div>
+		
+		<div class="popupFuse" id="popupWin">
+			<h2>CONGRATULATIONS!</h2>
+			<h3>You have fused a Winning creation!</h3>
+			<img class="drinkImg" src="graphics/New drink.png"></img>	
+				
+			<ul id="winFuse">
+					
+			</ul>
+			<input type="button" id="popupWinOk" class="popupNewButton" value="OK">
+		</div>
+		
+		<form class="popupFuse" id="popupWarn">
+			<h3>Your fuse is way too awesome. It would explode if we create it. How about choosing a drink from our list instead?</h3>
+			<input  id="page" type="hidden" name="page" value="2" checked/><br/>
+			<input type="hidden" name="quantity" value="5"/>
+			<input type="submit" id="popupNewOk" class="popupNewButton" value="OK :(">
+		</form>
+	</body>
+</html>
