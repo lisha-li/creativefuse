@@ -11,6 +11,8 @@ html, body {
 	background: #292929;
 	color: white;
 	font-family: 'CaviarDreams';
+	font-size: 26px;
+	zoom: 85%;
 }
 header{
 	position: absolute;
@@ -37,7 +39,7 @@ a:active {
 input[type="button"], input[type="submit"]{
 	outline: none;
 }
-input[type="button"]:active, input[type="submit"]:active, #cancel:active, #buttNext:active, #buttBack:active {
+input[type="button"]:active, input[type="submit"]:active, #cancel:active, #buttNext:active, #buttBack:active, #reset:active{
 	transform: scale(0.99,0.99);
 }
 ul {
@@ -52,15 +54,26 @@ label > input{
 	display: none;
 }
 label > input + img{ 
-	cursor:pointer;
 	border:5px solid transparent;
 	background: rgba(255, 255, 255, 0.5);
 	margin: 20px;
 }
-label > input:checked + img{ 
-	border:5px solid rgb(88,132,119);
+label > input + h1{ 
+	border:5px solid transparent;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 20px;
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	display: inline-block;
 }
-
+label > input:checked + img{ 
+	border:5px solid #df6b07;
+}
+label > input:checked + h1{ 
+	border:5px solid #df6b07;
+	color: #df6b07;
+}
 .title {
 	text-align: center;
 	position: relative;
@@ -111,7 +124,7 @@ label > input:checked + img{
 }
 #confirmWrapper {
 	position: fixed;
-	top: 80%;
+	top: 85%;
 	left: 50%;
 	margin-left: -150px;
 }
@@ -123,13 +136,6 @@ label > input:checked + img{
   height: 100px;
 }
 
-#B1, #B2, #B3, #C1, #C2, #C3, #fuse {
-	width: 100px;
-	height: 50px;
-	font-size: 18px;
-	position: relative;
-	margin: 5px;
-}
 #multiForm img {
 	width: 200px;
 	height: auto;
@@ -144,9 +150,18 @@ label > input:checked + img{
 	top: 15%;
 	left: 5%;
 }
+#buttReset {
+	position: absolute;
+	bottom: 40%;
+	left: 92%;
+}
+#buttReset img{
+	width: 300px;
+	height: auto;
+}
 #your_fuse {
 	position: relative;
-	top: 75%;
+	top: 80%;
 	width: 80%;
 	margin: 0 auto;
 	visibility: visible;
@@ -155,10 +170,12 @@ label > input:checked + img{
 .fuse_list {
 	position: relative;
 	left: 10%;
+	width: 80%;
 }
 .fuse_text{
 	position: absolute;
 	top: 10%;
+	font-size: 36px;
 }
 
 .plus {
@@ -213,26 +230,31 @@ label > input:checked + img{
 	position: absolute;
 	font-size:26px;
 	text-align:center;	
-	top: 38%;
+	top: 25%;
 	left: 10%;
 	width: 200px;
+	font-size: 34px;
 }
 #circleWrap{
-  position: absolute;
-  top: 25%;
-  left: 43%;
+	position: absolute;
+	top: 25%;
+	left: 43%;
 }
 #circleWrap img {
 	width: 250px;
 	height: 250px;
 }
+#barList h1 {
+	margin-top: 50px;
+}
+
 #drinkWrapper{
 	position: relative;
 	top: 10%;
 	margin: 0 auto;
 	background: rgba(255, 255, 255, 0.2);
 	border: 1 grey solid;
-	width: 50%;
+	width: 70%;
 	height: 70%;
 	overflow-y: scroll;
 }
@@ -241,8 +263,8 @@ label > input:checked + img{
 	height: 150px;
 }
 .popupbox {
-	width:450px;
-	height:300px;
+	width:650px;
+	height:500px;
 	display: none;
 	background: #df6b07;
 	float: left;
@@ -262,7 +284,7 @@ label > input:checked + img{
 	background: #292929;
 	position: fixed;
 	top: 15%;
-	z-index: 99999;
+	z-index: 999;
 	text-align:center;
 }
 .popupConfirm {
@@ -271,7 +293,7 @@ label > input:checked + img{
 	background: #292929;
 	position: fixed;
 	top: 15%;
-	z-index: 99999;
+	z-index: 999;
 	text-align:center;
 	font-size: 24px;
 }
@@ -280,7 +302,7 @@ label > input:checked + img{
 }
 .popupText {
 	padding: 20px 45px;
-	font-size: 26px;
+	font-size: 38px;
 }
 .popupButton {
 	border: 2px solid white;
@@ -290,7 +312,7 @@ label > input:checked + img{
 	height: 30%;
 	margin: 0 20px;
 	border-radius: 10px;
-	font-size: 26px;
+	font-size: 38px;
 }
 .popupNewButton {
 	border: 2px solid white;

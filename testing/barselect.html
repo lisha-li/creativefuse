@@ -1,11 +1,60 @@
-<h3>Select Bar</h3>
-<form method="GET">
-	<h3>Bar</h3>
-	<input type="radio" name="bar" value="1" checked/>1<br/>
-	<input type="radio" name="bar" value="2"/>2<br/>
-	<input type="radio" name="bar" value="3"/>3<br/>
-	<br/>
-	<input type="hidden" name="page" value="3"/>
-	<input type="hidden" name="quantity" value="5"/>
-	<input type="submit" value="Submit"/>
-</form>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creative Fuse</title>
+		<meta charset='utf-8'>
+		
+		<link rel = "stylesheet" href = "css/common.css" />
+		
+		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+		<script type='text/javascript' src="scripts/cancel.js"></script>
+		
+	</head>
+	
+	<body>
+		<header>
+			<h1 class="title"><img src="graphics/Icons/logo.png" /></h2>
+			<div id="cancel">
+				<img src="graphics/Icons/Cancel.png">
+			</div>
+		</header>
+		
+		<section id="message">
+			</br>
+			</br>
+			<h1>Select a bar: </h1>
+			</br>
+			</br>
+			<form id="barList" method="GET">
+				<label>
+					<input type="radio" name="bar" value="1" checked />
+					<h1>1</h1>
+				<label>
+				<label>
+					<input type="radio" name="bar" value="2" />
+					<h1>2</h1>
+				<label>
+				<label>
+					<input type="radio" name="bar" value="2" />
+					<h1>3</h1>
+				<label>
+				<br/>
+				<input type="hidden" name="page" value="3"/>
+				<input type="hidden" name="quantity" value="5"/>
+				<input type="submit" value="Submit"/>
+			
+				<div id="confirmWrapper">
+					<input type="submit" class="button" value="CONFIRM" >
+				</div>
+			</form>
+		</section>
+
+		
+		<form class="popupbox" id="popupCancel">
+			<h2 class="popupText">Are you sure you want return to the main menu?</h3>
+			<input  id="page" type="hidden" name="page" value="0" checked/><br/>
+			<input type="button" id="popupNo" class="popupButton" value="NO">
+			<input type="submit" id="popupYes" class="popupButton" value="YES">
+		</form>
+	</body>
+</html>

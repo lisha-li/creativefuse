@@ -43,6 +43,10 @@ jQuery(document).ready(function(){
 			$(this).remove();
 		};
 	});
+	
+	$("#reset").click(function() {
+		$(".fuse_list").empty();
+	});
 				
 	$("#C1").click(function() {
 		showLayer('page2');
