@@ -12,8 +12,14 @@ jQuery(document).ready(function(){
 			selCode = selCode[1].split('"');
 			var intVal = parseInt(selCode[0]);
 			
-			if ($selected.find("#i1").length > 0) {
-				$('#buzzer').get(0).play();
+			if( $(".fuse_list li").length < 10) {
+				if ($selected.find("#i1").length > 0) {
+					$("#kukameh").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#seriously').get(0).play();
+					}, 500);
+					$("#kukameh").delay(800).animate({"left":"100%"}, "slow");
+				}
 			}
 			
 			if( $(".fuse_list li").length > 10) {

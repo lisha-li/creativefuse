@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'CaviarDreams';
-	src: url('../graphics/fonts/caviardreams/caviardreams.ttf');
+	src: url('../graphics/Fonts/caviardreams/caviardreams.ttf');
 }
 
 html, body {
@@ -355,4 +355,9 @@ div[id^="radial_container"] img {
 	opacity: .50;
 	z-index: 9999;
 	filter: alpha(opacity=80);
+}
+.kukareact {
+	position: absolute;
+	top: -10%;
+	left: 100%;
 }
