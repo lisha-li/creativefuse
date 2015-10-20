@@ -23,14 +23,14 @@
 			<div id="page1" class="page" style="visibility:visible;">
 				<div id='radial_container'>
 					<ul class='list'>
-						<li class='item'><div id="i0"><img src="graphics/Ingredients/0.png"><input class='ingredient' value='0'></div></li>
-						<li class='item'><div id="i1"><img src="graphics/Ingredients/1.png"><input class='ingredient' value='1'></div></li>
+						<li class='item'><div id="i1"><img src="graphics/Ingredients/1.png"><input class='ingredient' value='1' ></div></li>
 						<li class='item'><div id="i2"><img src="graphics/Ingredients/2.png"><input class='ingredient' value='2'></div></li>
 						<li class='item'><div id="i3"><img src="graphics/Ingredients/3.png"><input class='ingredient' value='3'></div></li>
 						<li class='item'><div id="i4"><img src="graphics/Ingredients/4.png"><input class='ingredient' value='4'></div></li>
 						<li class='item'><div id="i5"><img src="graphics/Ingredients/5.png"><input class='ingredient' value='5'></div></li>
 						<li class='item'><div id="i6"><img src="graphics/Ingredients/6.png"><input class='ingredient' value='6'></div></li>
 						<li class='item'><div id="i7"><img src="graphics/Ingredients/7.png"><input class='ingredient' value='7'></div></li>
+						<li class='item'><div id="i7"><img src="graphics/Ingredients/8.png"><input class='ingredient' value='8'></div></li>
 					</ul>
 				</div >
 				<div id="circleWrap">
@@ -44,7 +44,6 @@
 			<div id="page2" class="page">
 				<div id='radial_container2'>
 					<ul class='list'>
-						<li class='item'><div id="i8"><img src="graphics/Ingredients/8.png"><input class='ingredient' value='8'></div></li>
 						<li class='item'><div id="i9"><img src="graphics/Ingredients/9.png"><input class='ingredient' value='9'></div></li>
 						<li class='item'><div id="i10"><img src="graphics/Ingredients/10.png"><input class='ingredient' value='10'></div></li>
 						<li class='item'><div id="i11"><img src="graphics/Ingredients/11.png"><input class='ingredient' value='11'></div></li>
@@ -52,6 +51,7 @@
 						<li class='item'><div id="i13"><img src="graphics/Ingredients/13.png"><input class='ingredient' value='13'></div></li>
 						<li class='item'><div id="i14"><img src="graphics/Ingredients/14.png"><input class='ingredient' value='14'></div></li>
 						<li class='item'><div id="i15"><img src="graphics/Ingredients/15.png"><input class='ingredient' value='15'></div></li>
+						<li class='item'><div id="i16"><img src="graphics/Ingredients/16.png"><input class='ingredient' value='16'></div></li>
 					</ul>
 				</div >
 				<div id="circleWrap">
@@ -68,13 +68,13 @@
 			<div id="page3" class="page">
 				<div id='radial_container3'>
 					<ul class='list'>
-						<li class='item'><div id="i16"><img src="graphics/Ingredients/16.png"><input class='ingredient' value='16'></div></li>
 						<li class='item'><div id="i17"><img src="graphics/Ingredients/17.png"><input class='ingredient' value='17'></div></li>
 						<li class='item'><div id="i18"><img src="graphics/Ingredients/18.png"><input class='ingredient' value='18'></div></li>
 						<li class='item'><div id="i19"><img src="graphics/Ingredients/19.png"><input class='ingredient' value='19'></div></li>
 						<li class='item'><div id="i20"><img src="graphics/Ingredients/20.png"><input class='ingredient' value='20'></div></li>
 						<li class='item'><div id="i21"><img src="graphics/Ingredients/21.png"><input class='ingredient' value='21'></div></li>
 						<li class='item'><div id="i22"><img src="graphics/Ingredients/22.png"><input class='ingredient' value='22'></div></li>
+						<li class='item'><div id="i23"><img src="graphics/Ingredients/23.png"><input class='ingredient' value='23'></div></li>
 					</ul>
 				</div >
 				<div id="circleWrap">
@@ -98,47 +98,84 @@
 			<ul class="fuse_list">
 
 			</ul>
+			<ul class="fuse_list2">
+
+			</ul>
 		</section>
 		
+		<audio id="buzzer" src="sound/Suspense.mp3" type="audio/mp3"></audio>
+		<audio id="winner" src="sound/winner.m4a" type="audio/m4a"></audio> 
+		<audio id="wrong" src="sound/wrong.m4a" type="audio/m4a"></audio> 
 		
 		<form class="popupbox" id="popupCancel">
-			<h2 class="popupText">Are you sure you want to cancel the game and return to the main menu?</h3>
+			<img class="warn" src="graphics/Icons/warning.png" />
+			<h2 class="popupText">Are you sure you want to return to the main menu?</h3>
 			<input  id="page" type="hidden" name="page" value="0" checked/><br/>
 			<input type="button" id="popupNo" class="popupButton" value="NO">
-			<input type="submit" id="popupYes" class="popupButton" value="YES">
+			<input type="button" id="popupYes" class="popupButton" value="YES" onClick="window.location.href = 'index.html'">
 		</form>
 		
 		<div class="popupbox" id="popupError">
+			<img class="warn" src="graphics/Icons/warning.png" />
 			<h2 class="popupText">You can't submit an empty or single ingredient fuse! Please pick at least 2 ingredients.</h3>
-			<input type="button" id="popupOk" class="popupButton" value="OK :(">
+			<input type="button" id="popupOk" class="popupButton" value="OK &#9785;">
 		</div>
 		
-		<div class="popupFuse" id="popupNew">
-			<h2>CONGRATULATIONS!</h2>
-			<h3>You have fused a new creation!</h3>
-			<img class="drinkImg" src="graphics/New drink.png"></img>	
+		<div class="popupbox" id="popupError2">
+			<img class="warn" src="graphics/Icons/warning.png" />
+			<h2 class="popupText">You can't select more than 6 ingredients. Sorry!</h3>
+			<input type="button" id="popupOk" class="popupButton" value="OK &#9785;">
+		</div>
+		
+		<div class="popupbox" id="popupSubmit">
+			<img class="warn" src="graphics/Icons/warning.png" />
+			<h2 class="popupText">Are you sure you want to submit this formula? It's not too late to change it!</h3>
+			<input type="button" id="popupNo" class="popupButton" value="NO">
+			<input type="button" id="popupYes2" class="popupButton" value="YES">
+		</div>
+		
+		<form class="popupFuse" id="popupNew">
+			<h2>OH GAWD!</h2>
+			<h3>Y-your formula is...well..horrid and potentially a health hazard.
+			</br>
+			Oh well. At least you can brag about it on social media.
+			</br>
+			How about choosing from my drink formulas instead? They're much safer than your abomination. 
+			</br>
+			Trust me. I'm an alcohol scientist.</h3>	
+			<h3>Your fuse</h3>	
 			<ul id="newFuse">
 					
 			</ul>
-			<input type="button" id="popupNewOk" class="popupNewButton" value="OK">
-		</div>
+			<input  id="page" type="hidden" name="page" value="2" checked/><br/>
+			<input type="hidden" name="quantity" value="5"/>
+			<input type="button" id="popupNewOk" class="popupNewButton" value="OK &#9785;" onClick="window.location.href = 'barselect.html'"">
+		</form>
 		
 		<div class="popupFuse" id="popupWin">
-			<h2>CONGRATULATIONS!</h2>
-			<h3>You have fused a Winning creation!</h3>
+			<h3>CONGRATS!</h3>
+			<h3>Your formula is quite fascinating indeed! Ha ha ha well done! Brilliant!
+			</br>
+			</br>
+			You have fused a:</h3>
 			<img class="drinkImg" src="graphics/New drink.png"></img>	
-				
+			
+			<h3>Consisting of:</h3>			
 			<ul id="winFuse">
 					
 			</ul>
-			<input type="button" id="popupWinOk" class="popupNewButton" value="OK">
+			<input type="button" id="popupWinOk" class="popupNewButton" value="Make me this drink!">
 		</div>
 		
 		<form class="popupFuse" id="popupWarn">
-			<h3>Your fuse is way too awesome. It would explode if we create it. How about choosing a drink from our list instead?</h3>
+			<img src="graphics/Icons/warning.png" />
+			<h2> OH NO!</h2>
+			<h3>Unfortunately in this demo, your fuse is so volatile that if I were to make that for you, it will blow my lab up to bits.
+			</br>
+			Maybe you can pick a drink formula from the database instead?</h3>
 			<input  id="page" type="hidden" name="page" value="2" checked/><br/>
 			<input type="hidden" name="quantity" value="5"/>
-			<input type="submit" id="popupNewOk" class="popupNewButton" value="OK :(">
+			<input type="button" id="popupNewOk" class="popupNewButton" value="OK &#9785;" onClick="window.location.href = 'barselect.html'">
 		</form>
 	</body>
 </html>

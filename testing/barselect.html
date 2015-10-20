@@ -22,21 +22,22 @@
 		<section id="message">
 			</br>
 			</br>
-			<h1>Select a bar: </h1>
+			<h1>Which bar do you want the drink to be served to? </h1>
 			</br>
 			</br>
 			<form id="barList" method="GET">
 				<label>
 					<input type="radio" name="bar" value="1" checked />
-					<h1>1</h1>
+					<h2></br>1</h2>
 				<label>
+				<label>
+					<input type="radio" name="bar" value="3" />
+					<h2></br>3</h2>
+				<label>
+				</br>
 				<label>
 					<input type="radio" name="bar" value="2" />
-					<h1>2</h1>
-				<label>
-				<label>
-					<input type="radio" name="bar" value="2" />
-					<h1>3</h1>
+					<h2></br>2</h2>
 				<label>
 				<br/>
 				<input type="hidden" name="page" value="3"/>
@@ -44,17 +45,18 @@
 				<input type="submit" value="Submit"/>
 			
 				<div id="confirmWrapper">
-					<input type="submit" class="button" value="CONFIRM" >
+					<input type="button" class="button" value="CONFIRM" onClick="window.location.href = 'drinklist.html'" >
 				</div>
 			</form>
 		</section>
 
 		
 		<form class="popupbox" id="popupCancel">
+			<img class="warn" src="graphics/Icons/warning.png" />
 			<h2 class="popupText">Are you sure you want return to the main menu?</h3>
 			<input  id="page" type="hidden" name="page" value="0" checked/><br/>
 			<input type="button" id="popupNo" class="popupButton" value="NO">
-			<input type="submit" id="popupYes" class="popupButton" value="YES">
+			<input type="button" id="popupYes" class="popupButton" value="YES" onClick="window.location.href = 'index.html'">
 		</form>
 	</body>
 </html>

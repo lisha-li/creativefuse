@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Creative Fuse</title>		
-		<link rel = "stylesheet" href = "css/common.css" />
-		
-		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
-	</head>
-	
-	<body>
-		<form id="confirmation" class="popupConfirm">
-			<h3>Please wait while we create your drink</h3>
-			<p><b>Your cocktail is: {{drink}}</b><br/>
-			<b>Your order number is: {{id}}</b>
-			</p>
-			<input id="page" type="hidden" name="page" value="0" checked/><br/>
-			<input type="submit" class="popupCon" value="Confirm">
-		</form>
-	</body>
-</html>
+<form id="confirmation" class="popupConfirm">
+	<h3>Please wait while we create your drink</h3>
+	<b>Your order number is: {{id}}</b>
+	</br>
+	</br>
+	<input id="page" type="hidden" name="page" value="0" checked/><br/>
+	<input type="button" class="popupCon" value="Confirm" onClick="window.location.href = 'index.html'">
+</form>

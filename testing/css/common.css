@@ -1,6 +1,8 @@
 @font-face {
 	font-family: 'CaviarDreams';
-	src: url('../graphics/Fonts/Caviar-Dreams/CaviarDreams.ttf')
+	src: url('../graphics/fonts/caviardreams/caviardreams.ttf') format('truetype'),
+		 url('../graphics/fonts/caviardreams/caviardreams-woff.woff') format('woff'),
+		 url('../graphics/fonts/caviardreams/caviardreams-eot.eot') format('eot');
 }
 
 html, body {
@@ -10,9 +12,9 @@ html, body {
 	overflow: hidden;
 	background: #292929;
 	color: white;
-	font-family: 'CaviarDreams';
+	font-family: 'CaviarDreams', 'Helvetica';
 	font-size: 26px;
-	zoom: 85%;
+	zoom: 88%;
 }
 header{
 	position: absolute;
@@ -20,6 +22,11 @@ header{
 	height: 15%;
 	width: 100%;
 }
+img {
+	width: 100%
+	height: auto;
+}
+
 a:link {
     color: white;
 	text-decoration: none;
@@ -38,8 +45,10 @@ a:active {
 }
 input[type="button"], input[type="submit"]{
 	outline: none;
+	font-family: 'CaviarDreams';
+	font-weight: bold;
 }
-input[type="button"]:active, input[type="submit"]:active, #cancel:active, #buttNext:active, #buttBack:active, #reset:active{
+div[id^="i"]:active , input[type="button"]:active, input[type="submit"]:active, #cancel:active, #buttNext:active, #buttBack:active, #reset:active{
 	transform: scale(0.99,0.99);
 }
 ul {
@@ -53,31 +62,33 @@ li {
 label > input{ 
 	display: none;
 }
-label > input + img{ 
-	border:5px solid transparent;
-	background: rgba(255, 255, 255, 0.5);
-	margin: 20px;
-}
-label > input + h1{ 
-	border:5px solid transparent;
-	background: rgba(255, 255, 255, 0.5);
-	margin: 20px;
-	width: 150px;
-	height: 150px;
+label > input + h2{ 
+	border:5px solid white;
+	margin: 12px 40px 0 60px;
+	width: 130px;
+	height: 130px;
 	border-radius: 100px;
 	display: inline-block;
 }
 label > input:checked + img{ 
-	border:5px solid #df6b07;
+	background-color: rgba(255,255,255,0.2);
 }
-label > input:checked + h1{ 
+label > input:checked + h2{ 
 	border:5px solid #df6b07;
 	color: #df6b07;
+}
+td {
+	width: 130px;
+	height: 130px;
+	vertical-align: bottom;
+}
+.tableTitle td{
+	height: 50px;
 }
 .title {
 	text-align: center;
 	position: relative;
-	top: -10%;
+	top: -18%;
 }
 .title img {
 	width: 200px;
@@ -90,7 +101,11 @@ label > input:checked + h1{
 	width: 100%;
 	visibility: hidden;
 }
-
+.warn {
+	margin-top: 40px;
+	width: 100px;
+	height: auto;
+}
 #instruction {
 	position: relative;
 	margin: 0 auto;
@@ -98,15 +113,11 @@ label > input:checked + h1{
 	width: 80%;
 	height: 60%;
 }
-
-#howTo {
+#instruction img {
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
-	height: 80%;
-	width: 80%;
+	margin: 0 auto;
+	padding: 50px
 }
-
 .button {
 	text-transform: capitalize;
 	text-align: center;
@@ -131,12 +142,14 @@ label > input:checked + h1{
 #cancel {
   position: absolute;
   left:85%;
-  top: 10%;
-  width: 100px;
-  height: 100px;
+  top: 15%;
+}
+#cancel img {
+	width: 180px;
+	height: auto;
 }
 
-#multiForm img {
+div[id^="radial_container"] img {
 	width: 200px;
 	height: auto;
 }
@@ -153,7 +166,7 @@ label > input:checked + h1{
 #buttReset {
 	position: absolute;
 	bottom: 40%;
-	left: 92%;
+	left: 85%;
 }
 #buttReset img{
 	width: 300px;
@@ -169,8 +182,8 @@ label > input:checked + h1{
 }
 .fuse_list {
 	position: relative;
-	left: 10%;
-	width: 80%;
+	left: 23.5%;
+	width: 55%;
 }
 .fuse_text{
 	position: absolute;
@@ -180,9 +193,9 @@ label > input:checked + h1{
 
 .plus {
 	position: absolute;
-	top: 10%;
+	top: -30%;
 	font-size: 50px;
-	margin-left: -10px;
+	margin-left: -12px;
 }
 
 .ingredient{
@@ -195,10 +208,7 @@ label > input:checked + h1{
 	top: 15%;
 	width: 80%;
 	height: 60%;
-}
-.drinkImg {
-	width: 250px;
-	height: 250px;
+	padding: 10px;
 }
 #drinkname {
 	display: inline-block;
@@ -216,15 +226,21 @@ label > input:checked + h1{
 	position: relative;
 	margin-left: -40px;
 }
-#winFuse img, #newFuse  img{
-	width: 150px;
-	height: auto;
-}
-#winFuse .plus, #newFuse  .plus {
+#newFuse  .plus {
 	position: absolute;
-	font-size: 50px;
+	top: 25%;
 	margin-top: 10px;
 	margin-left: -10px;
+}
+
+#winFuse .plus{
+	position: absolute;
+	top: 0%;
+	margin-top: 10px;
+	margin-left: -12px;
+}
+.beaker {
+	padding-left: 20px;
 }
 .circle{
 	position: absolute;
@@ -237,30 +253,23 @@ label > input:checked + h1{
 }
 #circleWrap{
 	position: absolute;
-	top: 25%;
+	top: 22%;
 	left: 43%;
 }
 #circleWrap img {
 	width: 250px;
 	height: 250px;
 }
-#barList h1 {
-	margin-top: 50px;
+#barList {
+	background: url("../graphics/Icons/bar.png") center no-repeat;
+	height: 320px;
 }
-
 #drinkWrapper{
 	position: relative;
-	top: 10%;
+	top: 0%;
 	margin: 0 auto;
-	background: rgba(255, 255, 255, 0.2);
 	border: 1 grey solid;
-	width: 70%;
-	height: 70%;
-	overflow-y: scroll;
-}
-#drinkWrapper img{
-	width: 150px;
-	height: 150px;
+	width: 80%;
 }
 .popupbox {
 	width:650px;
@@ -309,7 +318,7 @@ label > input:checked + h1{
 	background: none;
 	color: white;
 	width: 30%;
-	height: 30%;
+	height: 20%;
 	margin: 0 20px;
 	border-radius: 10px;
 	font-size: 38px;
@@ -320,7 +329,7 @@ label > input:checked + h1{
 	color: white;
 	width: 20%;
 	height: 10%;
-	margin: 30px;
+	margin: 0 20px;
 	border-radius: 10px;
 	font-size: 26px;
 }

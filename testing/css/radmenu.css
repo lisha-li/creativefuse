@@ -7,7 +7,3 @@
   text-align:center;
   margin: 0 auto;
 }
-
-.radial_div_item.active img, label{
-	visibility: hidden;
-}
