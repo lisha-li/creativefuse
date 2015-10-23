@@ -30,7 +30,7 @@
 						<li class='item'><div id="i5"><img src="graphics/Ingredients/5.png"><input class='ingredient' value='5'></div></li>
 						<li class='item'><div id="i6"><img src="graphics/Ingredients/6.png"><input class='ingredient' value='6'></div></li>
 						<li class='item'><div id="i7"><img src="graphics/Ingredients/7.png"><input class='ingredient' value='7'></div></li>
-						<li class='item'><div id="i7"><img src="graphics/Ingredients/8.png"><input class='ingredient' value='8'></div></li>
+						<li class='item'><div id="i8"><img src="graphics/Ingredients/8.png"><input class='ingredient' value='8'></div></li>
 					</ul>
 				</div >
 				<div id="circleWrap">
@@ -75,6 +75,7 @@
 						<li class='item'><div id="i21"><img src="graphics/Ingredients/21.png"><input class='ingredient' value='21'></div></li>
 						<li class='item'><div id="i22"><img src="graphics/Ingredients/22.png"><input class='ingredient' value='22'></div></li>
 						<li class='item'><div id="i23"><img src="graphics/Ingredients/23.png"><input class='ingredient' value='23'></div></li>
+						<li class='item'><div id="i24"><img src="graphics/Ingredients/24.png"><input class='ingredient' value='24'></div></li>
 					</ul>
 				</div >
 				<div id="circleWrap">
@@ -108,7 +109,7 @@
 			<h2 class="popupText">Are you sure you want to return to the main menu?</h3>
 			<input  id="page" type="hidden" name="page" value="0" checked/><br/>
 			<input type="button" id="popupNo" class="popupButton" value="NO">
-			<input type="button" id="popupYes" class="popupButton" value="YES" onClick="window.location.href = 'index.html'">
+			<input type="submit" id="popupYes" class="popupButton" value="YES">
 		</form>
 		
 		<div class="popupbox" id="popupError">
@@ -130,6 +131,13 @@
 			<input type="button" id="popupYes2" class="popupButton" value="YES">
 		</div>
 		
+		<div class="popupbox" id="popupReset">
+			<img class="warn" src="graphics/Icons/warning.png" />
+			<h2 class="popupText">Are you sure you want to reset your fuse? </h3>
+			<input type="button" id="popupNo" class="popupButton" value="NO">
+			<input type="button" id="popupYes3" class="popupButton" value="YES">
+		</div>
+		
 		<form class="popupFuse" id="popupNew">
 			<h2>OH GAWD!</h2>
 			<h3>Y-your formula is...well..horrid and potentially a health hazard.
@@ -145,7 +153,7 @@
 			</ul>
 			<input  id="page" type="hidden" name="page" value="2" checked/><br/>
 			<input type="hidden" name="quantity" value="5"/>
-			<input type="button" id="popupNewOk" class="popupNewButton" value="OK &#9785;" onClick="window.location.href = 'barselect.html'"">
+			<input type="submit" id="popupNewOk" class="popupNewButton" value="OK &#9785;">
 		</form>
 		
 		<div class="popupFuse" id="popupWin">
@@ -165,21 +173,63 @@
 		
 		<form class="popupFuse" id="popupWarn">
 			<img src="graphics/Icons/warning.png" />
-			<h2> OH NO!</h2>
+			<h2> UH OH!</h2>
 			<h3>Unfortunately in this demo, your fuse is so volatile that if I were to make that for you, it will blow my lab up to bits.
 			</br>
 			Maybe you can pick a drink formula from the database instead?</h3>
 			<input  id="page" type="hidden" name="page" value="2" checked/><br/>
 			<input type="hidden" name="quantity" value="5"/>
-			<input type="button" id="popupNewOk" class="popupNewButton" value="OK &#9785;" onClick="window.location.href = 'barselect.html'">
+			<input type="submit" id="popupNewOk" class="popupNewButton" value="OK :(">
 		</form>
 		
 		<audio id="seriously" src="sound/seriously.mp3" type="audio/mp3"></audio>
-		<audio id="winner" src="sound/winner.m4a" type="audio/m4a"></audio> 
-		<audio id="wrong" src="sound/wrong.m4a" type="audio/m4a"></audio> 
 		
-		<div id="kukameh" class="kukareact">
+		<audio id="vodka" src="sound/vodka.mp3" type="audio/mp3"></audio>
+		<audio id="rum" src="sound/rum.mp3" type="audio/mp3"></audio>
+		<audio id="bourbon" src="sound/bourbon.mp3" type="audio/mp3"></audio>
+		<audio id="tequila" src="sound/tequila2.mp3" type="audio/mp3"></audio>
+		<audio id="gin" src="sound/gin.mp3" type="audio/mp3"></audio>
+		<audio id="kalua" src="sound/kalua.mp3" type="audio/mp3"></audio>
+		<audio id="cointreau" src="sound/cointreau.mp3" type="audio/mp3"></audio>
+		<audio id="curacao" src="sound/curacao.mp3" type="audio/mp3"></audio>
+		<audio id="orange" src="sound/orange.mp3" type="audio/mp3"></audio>
+		<audio id="bacon" src="sound/bacon.mp3" type="audio/mp3"></audio>
+		<audio id="cranberry" src="sound/cranberry.mp3" type="audio/mp3"></audio>
+		<audio id="fairydust" src="sound/fairydust.mp3" type="audio/mp3"></audio>
+		<audio id="lemon" src="sound/lemon.mp3" type="audio/mp3"></audio>
+		<audio id="pineapple" src="sound/pineapple.mp3" type="audio/mp3"></audio>
+		<audio id="coffee" src="sound/coffee.mp3" type="audio/mp3"></audio>
+		<audio id="sugarsyrup" src="sound/sugarsyrup.mp3" type="audio/mp3"></audio>
+		<audio id="grenadine" src="sound/grenadine.mp3" type="audio/mp3"></audio>
+		<audio id="georgesmusk" src="sound/georgesmusk.mp3" type="audio/mp3"></audio>
+		<audio id="soda" src="sound/soda2.mp3" type="audio/mp3"></audio>
+		<audio id="tears" src="sound/tears.mp3" type="audio/mp3"></audio>
+		<audio id="nitrogen" src="sound/nitrogen.mp3" type="audio/mp3"></audio>
+		<audio id="coconutcream" src="sound/coconutcream.mp3" type="audio/mp3"></audio>
+		
+		<audio id="welcomeafter" src="sound/welcomeafter.mp3" type="audio/mp3"></audio>
+		<audio id="warning" src="sound/warning.mp3" type="audio/mp3"></audio>
+		<audio id="wrong" src="sound/wrongformula.mp3" type="audio/mp3"></audio>
+		<audio id="win" src="sound/winformula.mp3" type="audio/mp3"></audio>
+		<audio id="caution" src="sound/caution.mp3" type="audio/mp3"></audio>
+		
+		<div id="kuka" class="kukareact">
 			<img src="graphics/kuka.png" />
+		</div>
+		<div id="kukaMeh" class="kukareact">
+			<img src="graphics/kukaMeh.png" />
+		</div>
+		<div id="kukaHappy" class="kukareact">
+			<img src="graphics/kukaHappy.png" />
+		</div>
+		<div id="kukaSmirk" class="kukareact">
+			<img src="graphics/kukaSmirk.png" />
+		</div>
+		<div id="kukaDizzy" class="kukareact">
+			<img src="graphics/kukaDizzy.png" />
+		</div>
+		<div id="kukaShock" class="kukareact">
+			<img src="graphics/kukaShock.png" />
 		</div>
 	</body>
 </html>

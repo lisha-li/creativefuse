@@ -1,4 +1,10 @@
 jQuery(document).ready(function(){
+	$("#kukaSmirk").animate({"left":"50%"}, "slow");
+	setTimeout(function () {
+		$('#welcomeafter').get(0).play();
+	}, 1000);
+	$("#kukaSmirk").delay(7000).animate({"left":"100%"}, "slow");
+
 	jQuery("#radial_container,#radial_container2,#radial_container3,#radial_container4").radmenu({
 		listClass: 'list', // the list class to look within for items
 		itemClass: 'item', // the items - NOTE: the HTML inside the item is copied into the menu item
@@ -14,11 +20,179 @@ jQuery(document).ready(function(){
 			
 			if( $(".fuse_list li").length < 10) {
 				if ($selected.find("#i1").length > 0) {
-					$("#kukameh").animate({"left":"50%"}, "slow");
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#vodka').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(1400).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i2").length > 0) {
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#rum').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i3").length > 0) {
+					$("#kukaShock").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#bourbon').get(0).play();
+					}, 500);
+					$("#kukaShock").delay(1100).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i4").length > 0) {
+					$("#kukaSmirk").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#tequila').get(0).play();
+					}, 500);
+					$("#kukaSmirk").delay(1500).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i5").length > 0) {
+					$("#kuka").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#kalua').get(0).play();
+					}, 500);
+					$("#kuka").delay(1200).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i6").length > 0) {
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#cointreau').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(1400).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i7").length > 0) {
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#curacao').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(1100).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i8").length > 0) {
+					$("#kuka").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#gin').get(0).play();
+					}, 500);
+					$("#kuka").delay(2200).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i8").length > 0) {
+					$("#kuka").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#gin').get(0).play();
+					}, 500);
+					$("#kuka").delay(2200).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i9").length > 0) {
+					$("#kuka").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#orange').get(0).play();
+					}, 500);
+					$("#kuka").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i10").length > 0) {
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#bacon').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(800).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i11").length > 0) {
+					$("#kuka").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#cranberry').get(0).play();
+					}, 500);
+					$("#kuka").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i12").length > 0) {
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#fairydust').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(1300).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i13").length > 0) {
+					$("#kukaShock").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#lemon').get(0).play();
+					}, 500);
+					$("#kukaShock").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i14").length > 0) {
+					$("#kukaMeh").animate({"left":"50%"}, "slow");
 					setTimeout(function () {
 						$('#seriously').get(0).play();
 					}, 500);
-					$("#kukameh").delay(800).animate({"left":"100%"}, "slow");
+					$("#kukaMeh").delay(800).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i15").length > 0) {
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#pineapple').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i16").length > 0) {
+					$("#kukaShock").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#lemon').get(0).play();
+					}, 500);
+					$("#kukaShock").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i17").length > 0) {
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#coffee').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i18").length > 0) {
+					$("#kukaMeh").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#sugarsyrup').get(0).play();
+					}, 500);
+					$("#kukaMeh").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i19").length > 0) {
+					$("#kuka").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#grenadine').get(0).play();
+					}, 500);
+					$("#kuka").delay(1200).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i20").length > 0) {
+					$("#kukaSmirk").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#georgesmusk').get(0).play();
+					}, 500);
+					$("#kukaSmirk").delay(1000).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i21").length > 0) {
+					$("#kukaSmirk").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#soda').get(0).play();
+					}, 500);
+					$("#kukaSmirk").delay(800).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i22").length > 0) {
+					$("#kukaShock").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#tears').get(0).play();
+					}, 500);
+					$("#kukaShock").delay(1000).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i23").length > 0) {
+					$("#kukaShock").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#nitrogen').get(0).play();
+					}, 500);
+					$("#kukaShock").delay(900).animate({"left":"100%"}, "slow");
+				}
+				else if ($selected.find("#i24").length > 0) {
+					$("#kukaHappy").animate({"left":"50%"}, "slow");
+					setTimeout(function () {
+						$('#coconutcream').get(0).play();
+					}, 500);
+					$("#kukaHappy").delay(1200).animate({"left":"100%"}, "slow");
 				}
 			}
 			
@@ -68,7 +242,29 @@ jQuery(document).ready(function(){
 	});
 	
 	$("#reset").click(function() {
-		$(".fuse_list").empty();
+		setTimeout(function () {
+			$('#warning').get(0).play();
+		}, 200);
+		$("#popupReset").fadeIn();
+			$("body").append('<div id="fade"></div>');
+			$("#fade").css({'filter' : 'alpha(opacity=80)'}).fadeIn();
+			
+			var popuptopmargin = ($("#popupReset").height() + 10) / 2;
+			var popupleftmargin = ($("#popupReset").width() + 10) / 2;
+			
+			$("#popupReset").css({
+				'margin-top' : -popuptopmargin,
+				'margin-left' : -popupleftmargin
+			});
+						
+			$("#popupNo,#fade").click(function() {
+				$("#fade , #popupReset").fadeOut();
+			});
+			
+			$("#popupYes3").click(function() {
+				$("#fade , #popupReset").fadeOut();
+				$(".fuse_list").empty();
+		});
 	});
 				
 	$("#C1").click(function() {
@@ -87,7 +283,10 @@ jQuery(document).ready(function(){
 	$("#fuse").click(function() {
 		
 		if($(".fuse_list li").length > 2) {
-	
+			setTimeout(function () {
+				$('#seriously').get(0).play();
+			}, 200);
+			
 			$("#popupSubmit").fadeIn();
 			$("body").append('<div id="fade"></div>');
 			$("#fade").css({'filter' : 'alpha(opacity=80)'}).fadeIn();
@@ -110,6 +309,9 @@ jQuery(document).ready(function(){
 			});
 		}
 		else {
+			setTimeout(function () {
+				$('#warning').get(0).play();
+			}, 200);
 			$("#popupError").fadeIn();
 			$("body").append('<div id="fade"></div>');
 			$("#fade").css({'filter' : 'alpha(opacity=80)'}).fadeIn();
@@ -172,13 +374,17 @@ jQuery(document).ready(function(){
 			};
 			
 			if (combo == "new") {
-				$('#wrong').get(0).play();
+				setTimeout(function () {
+					$('#wrong').get(0).play();
+				}, 200);
 				$("#newFuse").html(fuse);
 				$("#newFuse").append("<li><h3 class='plus'>=</h3></li><li><img class='beaker' src='graphics/Icons/beaker.png' /></li>");
 				$("#popupNew").fadeIn();
 			}
 			else if(combo == "win"){
-				$('#winner').get(0).play();
+				setTimeout(function () {
+					$('#win').get(0).play();
+				}, 200);
 				$("#winFuse").html(fuse);
 				$(".drinkImg").attr("src","graphics/Drinks/"+drink+".png");
 				$("#popupWin").fadeIn();
@@ -186,6 +392,9 @@ jQuery(document).ready(function(){
 				$("#popupWinOk").click(function() {
 					$("#popupWin").fadeOut();
 					
+					setTimeout(function () {
+						$('#caution').get(0).play();
+					}, 500);
 					$("#popupWarn").fadeIn();
 				});
 			}

@@ -45,18 +45,19 @@
 				<input type="submit" value="Submit"/>
 			
 				<div id="confirmWrapper">
-					<input type="button" class="button" value="CONFIRM" onClick="window.location.href = 'drinkList.html'" >
+					<input type="submit" class="button" value="CONFIRM" >
 				</div>
 			</form>
 		</section>
-
+		
+		<audio id="seriously" src="sound/seriously.mp3" type="audio/mp3"></audio>
 		
 		<form class="popupbox" id="popupCancel">
 			<img class="warn" src="graphics/Icons/warning.png" />
 			<h2 class="popupText">Are you sure you want return to the main menu?</h3>
 			<input  id="page" type="hidden" name="page" value="0" checked/><br/>
 			<input type="button" id="popupNo" class="popupButton" value="NO">
-			<input type="button" id="popupYes" class="popupButton" value="YES" onClick="window.location.href = 'index.html'">
+			<input type="submit" id="popupYes" class="popupButton" value="YES">
 		</form>
 	</body>
 </html>

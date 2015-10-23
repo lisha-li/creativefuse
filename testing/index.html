@@ -5,6 +5,25 @@
 		<meta charset='utf-8'>
 		
 		<link rel = "stylesheet" href = "css/common.css" />
+		
+		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				$('#welcome').get(0).play();
+				
+				var counter = 0;
+				setInterval(function(){ 
+					if(counter % 2 === 0) {
+						$('#welcome2').get(0).play();
+					}
+					else {
+						$('#welcome').get(0).play();
+					}
+					counter++;
+				}, 15000);
+
+			});
+		</script>
 	</head>
 	
 	<body>
@@ -20,11 +39,10 @@
 		<form id="startWrapper" method="GET">
 			<input id="page" type="hidden" name="page" value="1" checked/><br/>
 			<input type="hidden" name="quantity" value="5"/>
-			<input type="button" id="confirm" class="button" value="START" onClick="window.location.href = 'customize.html'")>
+			<input type="submit" id="confirm" class="button" value="START">
 		</form>
-
-		<footer>
-		</footer>
 		
+		<audio id="welcome" src="sound/welcome.mp3" type="audio/mp3"></audio>
+		<audio id="welcome2" src="sound/welcome2.mp3" type="audio/mp3"></audio>
 	</body>
 </html>

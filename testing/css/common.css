@@ -1,6 +1,8 @@
 @font-face {
 	font-family: 'CaviarDreams';
-	src: url('../graphics/Fonts/caviardreams/caviardreams.ttf');
+	src: url('../graphics/fonts/caviardreams/caviardreams.ttf') format('truetype'),
+		 url('../graphics/fonts/caviardreams/caviardreams-woff.woff') format('woff'),
+		 url('../graphics/fonts/caviardreams/caviardreams-eot.eot') format('eot');
 }
 
 html, body {

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creative Fuse</title>
+		<meta charset='utf-8'>
+		
+		<link rel = "stylesheet" href = "../css/common.css" />
+		
+		<script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
+		<script type='text/javascript' src="../scripts/cancel.js"></script>
+		
+	</head>
+	
+	<body>
+		<header>
+			<h1 class="title">Create your Fuse</h2>
+			<div id="cancel">
+				<img src="../graphics/Icons/Cancel.png">
+			</div>
+		</header>
+		
+		<section id="message">
+			<h1>DRINKS LIST</h1>
+			<form id="drinkWrapper" method="GET">
+				<label>
+					<input id="EspressoMartini" type="radio" name="drink" value="85" checked />
+					<img src="../graphics/EspressoMartini.png">
+					<label for="EspressoMartini">Espresso Martini</label>
+				<label>
+					<input id="CranberryKick" type="radio" name="drink" value="86" />
+					<img src="../graphics/CranberryKick.png">
+					<label for="CranberryKick">Cranberry Kick</label>
+				</label>
+				<label>
+					<input id="Madras" type="radio" name="drink" value="87" />
+					<img src="../graphics/Madras.png">
+					<label for="Madras">Madras</label>
+				</label>
+				<label>
+					<input id="BlueElephant" type="radio" name="drink" value="89" />
+					<img src="../graphics/BlueElephant.png">
+					<label for="BlueElephant">Blue Elephant</label>
+				</label>
+				<label>
+					<input id="BlueHawaiin" type="radio" name="drink" value="90" />
+					<img src="../graphics/BlueHawaiin.png">
+					<label for="BlueHawaiin">Blue Hawaiin</label>
+				</label>
+				<label>
+					<input id="PinaColada" type="radio" name="drink" value="91" />
+					<img src="../graphics/PinaColada.png">
+					<label for="PinaColada">Pina Colada</label>
+				</label>
+				<label>
+					<input id="MaiTai" type="radio" name="drink" value="92" />
+					<img src="../graphics/MaiTai.png">
+					<label for="MaiTai">Mai Tai</label>
+				</label>
+				<label>
+					<input id="LondonLemonade" type="radio" name="drink" value="93" />
+					<img src="../graphics/LondonLemonade.png">
+					<label for="LondonLemonade">London Lemonade</label>
+				</label>
+				<label>
+					<input id="CranberryGin" type="radio" name="drink" value="95" />
+					<img src="../graphics/CranberryGin.png">
+					<label for="CranberryGin">Cranberry Gin</label>
+				</label>
+				<label>
+					<input id="PalmBeach" type="radio" name="drink" value="96" />
+					<img src="../graphics/PalmBeach.png">
+					<label for="PalmBeach">Palm Beach</label>
+				</label>
+				<label>
+					<input id="Trotsky" type="radio" name="drink" value="99" />
+					<img src="../graphics/Trotsky.png">
+					<label for="Trotsky">Trotsky</label>
+				</label>
+				<label>
+					<input id="MortonsSpecial" type="radio" name="drink" value="100" />
+					<img src="../graphics/MortonsSpecial.png">
+					<label for="MortonsSpecial">Mortons Special</label>
+				</label>
+				<label>
+					<input id="TequilaSunrise" type="radio" name="drink" value="101" />
+					<img src="../graphics/TequilaSunrise.png">
+					<label for="TequilaSunrise">Tequila Sunrise</label>
+				</label>
+				<label>
+					<input id="MexicanCoffee" type="radio" name="drink" value="102" />
+					<img src="../graphics/MexicanCoffee.png">
+					<label for="MexicanCoffee">Mexican Coffee</label>
+				</label>
+				<label>
+					<input id="Divan" type="radio" name="drink" value="103" />
+					<img src="../graphics/Divan.png">
+					<label for="Divan">Divan</label>
+				</label>
+				<label>
+					<input id="JohnCollins" type="radio" name="drink" value="104" />
+					<img src="../graphics/JohnCollins.png">
+					<label for="JohnCollins">John Collins</label>
+				</label>
+				<label>
+					<input id="ShirleyTemple" type="radio" name="drink" value="107" />
+					<img src="../graphics/ShirleyTemple.png">
+					<label for="ShirleyTemple">Shirley Temple</label>
+				</label>
+				<label>
+					<input id="Lemonade" type="radio" name="drink" value="108" />
+					<img src="../graphics/Lemonade.png">
+					<label for="Lemonade">Lemonade</label>
+				</label>
+				<label>
+					<input id="GentleSeaBreeze" type="radio" name="drink" value="109" />
+					<img src="../graphics/GentleSeaBreeze.png">
+					<label for="GentleSeaBreeze">Gentle Sea Breeze</label>
+				</label>
+				<label>
+					<input id="IcedCoffee" type="radio" name="drink" value="111" />
+					<img src="../graphics/IcedCoffee.png">
+					<label for="IcedCoffee">Iced Coffee</label>
+				</label>
+				
+				<input type="hidden" name="quantity" value="{{quantity}}"/>
+				<input type="hidden" name="bar"  value="{{bar}}"/>
+			
+				<div id="confirmWrapper">
+					<input type="submit" class="button" value="CONFIRM" >
+				</div>
+			</form>
+		</section>
+
+		
+		<div class="popupbox" id="popupCancel">
+			<h2 class="popupText">Are you sure you want return to the main menu?</h3>
+			<input type="button" id="popupNo" class="popupButton" value="NO">
+			<input type="button" id="popupYes" class="popupButton" value="YES">
+		</div>
+		
+	</body>
+</html>
