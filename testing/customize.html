@@ -109,7 +109,7 @@
 			<h2 class="popupText">Are you sure you want to return to the main menu?</h3>
 			<input  id="page" type="hidden" name="page" value="0" checked/><br/>
 			<input type="button" id="popupNo" class="popupButton" value="NO">
-			<input type="submit" id="popupYes" class="popupButton" value="YES">
+			<input type="button" id="popupYes" class="popupButton" value="YES" onClick="location.href='index.html'">
 		</form>
 		
 		<div class="popupbox" id="popupError">
@@ -153,7 +153,7 @@
 			</ul>
 			<input  id="page" type="hidden" name="page" value="2" checked/><br/>
 			<input type="hidden" name="quantity" value="5"/>
-			<input type="submit" id="popupNewOk" class="popupNewButton" value="OK &#9785;">
+			<input type="button" id="popupNewOk" class="popupNewButton" value="OK &#9785;" onClick="location.href='barselect.html'">
 		</form>
 		
 		<div class="popupFuse" id="popupWin">
@@ -179,7 +179,7 @@
 			Maybe you can pick a drink formula from the database instead?</h3>
 			<input  id="page" type="hidden" name="page" value="2" checked/><br/>
 			<input type="hidden" name="quantity" value="5"/>
-			<input type="submit" id="popupNewOk" class="popupNewButton" value="OK :(">
+			<input type="button" id="popupNewOk" class="popupNewButton" value="OK &#9785;" onClick="location.href='barselect.html'">
 		</form>
 		
 		<audio id="seriously" src="sound/seriously.mp3" type="audio/mp3"></audio>
