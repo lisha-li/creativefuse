@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 
-	$('input').click(function() {
+	$('#drinkWrapper input').click(function() {
 		if ($('#ExpressoMartini').is(':checked')) { 
 			$("#kuka").animate({"left":"0%"}, "slow");
 			setTimeout(function () {

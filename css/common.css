@@ -1,6 +1,8 @@
 @font-face {
 	font-family: 'CaviarDreams';
-	src: url('../graphics/Fonts/caviardreams/caviardreams.ttf');
+	src: url('../graphics/fonts/caviardreams/caviardreams.ttf') format('truetype'),
+		 url('../graphics/fonts/caviardreams/caviardreams-woff.woff') format('woff'),
+		 url('../graphics/fonts/caviardreams/caviardreams-eot.eot') format('eot');
 }
 
 html, body {
@@ -76,9 +78,13 @@ label > input:checked + h2{
 	color: #df6b07;
 }
 td {
-	width: 130px;
-	height: 130px;
+	width: 140px;
+	height: 140px;
 	vertical-align: bottom;
+}
+td img {
+	width: 140px;
+	height: auto;
 }
 .tableTitle td{
 	height: 50px;
@@ -111,10 +117,31 @@ td {
 	width: 80%;
 	height: 60%;
 }
-#instruction img {
-	display: block;
+.frame {
+	display:inline-block;
 	margin: 0 auto;
-	padding: 50px
+	width: 345px;
+	height: auto;
+}
+#rule-gif {
+	position: absolute;
+	top: 140px;
+	left: 38px;
+}
+.rule {
+	display:inline-block;
+	width: 265px;
+	height: auto;
+	margin-right: 69px;
+	border: 5px solid white;
+}
+.rule2{
+	display:inline-block;
+	width: 265px;
+	height: auto;
+	border: 5px solid white;
+	margin-left: 5px;
+	margin-right: 0;
 }
 .button {
 	text-transform: capitalize;
@@ -208,18 +235,6 @@ div[id^="radial_container"] img {
 	height: 60%;
 	padding: 10px;
 }
-#drinkname {
-	display: inline-block;
-	margin: 0 auto;
-	height: 20px;
-}
-#nameButton{
-	position: absolute;
-}
-#nameButton img {
-	width: 17px;
-	height: 17px;
-}
 #winFuse, #newFuse {
 	position: relative;
 	margin-left: -40px;
@@ -304,9 +319,6 @@ div[id^="radial_container"] img {
 	text-align:center;
 	font-size: 24px;
 }
-.popupConfirm h3{
-	padding-top: 80px;
-}
 .popupText {
 	padding: 20px 45px;
 	font-size: 38px;
@@ -325,6 +337,7 @@ div[id^="radial_container"] img {
 	border: 2px solid white;
 	background: none;
 	color: white;
+	width: 20%;
 	width: 20%;
 	height: 10%;
 	margin: 0 20px;
@@ -348,16 +361,14 @@ div[id^="radial_container"] img {
 	opacity: .50;
 	z-index: 9999;
 }
-#fade2 {
-	background: #FFF;
-	position: fixed; left: 0; top: 0;
-	width: 100%; height: 100%;
-	opacity: .50;
-	z-index: 9999;
-	filter: alpha(opacity=80);
-}
 .kukareact {
 	position: absolute;
 	top: -10%;
 	left: 100%;
+}
+.kukareact2 {
+	position: absolute;
+	top: -10%;
+	left: 0%;
+	z-index: 99;
 }

@@ -1,9 +1,4 @@
 jQuery(document).ready(function(){
-	$("#kukaSmirk").animate({"left":"0%"}, "slow");
-	setTimeout(function () {
-		$('#welcomeafter').get(0).play();
-	}, 1000);
-	$("#kukaSmirk").delay(7000).animate({"left":"100%"}, "slow");
 
 	jQuery("#radial_container,#radial_container2,#radial_container3,#radial_container4").radmenu({
 		listClass: 'list', // the list class to look within for items
@@ -227,11 +222,14 @@ jQuery(document).ready(function(){
 		},
 		angleOffset: 0 // in degrees
 	});
-			
-	addEventListener('load',function(){
-		jQuery("#radial_container,#radial_container2,#radial_container3,#radial_container4").radmenu("show");
-	},
-	false);
+	
+	jQuery("#radial_container,#radial_container2,#radial_container3,#radial_container4").radmenu("show");
+		setTimeout(function () {
+			$('#welcomeafter').get(0).play();
+		}, 1000);
+	$("#kukaSmirk2").delay(8000).animate({"left":"100%"}, "slow");
+	
+	
 	
 	$("#your_fuse").on('click', 'li', function() {
 		if ($(this).is(':first-child')){

@@ -9,15 +9,18 @@
 		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
-				$('#welcome').get(0).play();
 				
 				var counter = 0;
 				setInterval(function(){ 
 					if(counter % 2 === 0) {
+						$("#kukaHappy").animate({"left":"0%"}, "slow");
 						$('#welcome2').get(0).play();
+						$("#kukaHappy").delay(3000).animate({"left":"100%"}, "slow");
 					}
 					else {
+						$("#kukaMeh").animate({"left":"0%"}, "slow");
 						$('#welcome').get(0).play();
+						$("#kukaMeh").delay(5000).animate({"left":"100%"}, "slow");
 					}
 					counter++;
 				}, 15000);
@@ -33,7 +36,17 @@
 		
 		<section id="instruction">
 			<h2>HOW TO ADMISTER ALCOHOL</h2>
-			<img src="graphics/Icons/rules.png"></img>
+			<img class="frame" src="graphics/rules/frame1.png" />
+			<img class="frame" src="graphics/rules/frame2.png" />
+			<img class="frame" src="graphics/rules/frame3.png" />
+			<img class="frame" src="graphics/rules/frame4.png" />
+		
+			<div id="rule-gif">
+				<img class="rule" src="graphics/rules/step1.gif" />
+				<img class="rule" src="graphics/rules/step2.gif" />
+				<img class="rule" src="graphics/rules/step3.gif" />
+				<img class="rule2" src="graphics/rules/step4.gif" />
+			</div>
 		</section>
 		
 		<form id="startWrapper" method="GET">
@@ -44,5 +57,12 @@
 		
 		<audio id="welcome" src="sound/welcome.mp3" type="audio/mp3"></audio>
 		<audio id="welcome2" src="sound/welcome2.mp3" type="audio/mp3"></audio>
+		
+		<div id="kukaMeh" class="kukareact">
+			<img src="graphics/kukaMeh.png" />
+		</div>
+		<div id="kukaHappy" class="kukareact">
+			<img src="graphics/kukaHappy.png" />
+		</div>
 	</body>
 </html>
