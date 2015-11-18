@@ -1,22 +1,37 @@
-<script type="text/javascript" src="scripts/sound.js"></script>
-
-<form id="confirmation" class="popupConfirm">
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	<h2>Please wait while we create your drink</h2>
-	</br>
-	</br>
-	<img src="graphics/Icons/load.gif" onload="fusing()">
-	</br>
-	</br>
-	<h3>Your order number is: {{id}}</h3>
-	</br>
-	</br>
-	<input id="page" type="hidden" name="page" value="0" checked/><br/>
-	<input type="submit" class="popupCon" value="Confirm">
-</form>
-
-<audio id="fusing" src="sound/fusing.mp3" type="audio/mp3"></audio>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creative Fuse</title>
+		<meta charset='utf-8'>
+		
+		<link rel = "stylesheet" href = "css/common.css" />
+		
+		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="scripts/cancel.js"></script>
+		<script type="text/javascript" src="scripts/sound.js"></script>
+	</head>
+	
+	<body>
+		<header>
+			<h1 class="title"><img src="graphics/Icons/logo.png" /></h2>
+		</header>
+		<form id="confirmation" class="popupConfirm">
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			<h1>Thank you for trying out the demo!</h1>
+			<h2>If you want a drink, please head to the actual bar!</h2>
+			</br>
+			</br>
+			</br>
+			</br>
+			<input id="page" type="hidden" name="page" value="0" checked/><br/>
+			<input type="button" class="popupCon" value="RESTART" onClick="location.href='index.html'">
+		</form>
+	</body>
+</html>
