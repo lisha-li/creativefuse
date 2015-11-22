@@ -26,14 +26,14 @@ jQuery(document).ready(function(){
 					setTimeout(function () {
 						$('#rum').get(0).play();
 					}, 500);
-					$("#kukaHappy").delay(1000).animate({"left":"100%"}, "slow");
+					$("#kukaHappy").delay(2200).animate({"left":"100%"}, "slow");
 				}
 				else if ($selected.find("#i3").length > 0) {
-					$("#kukaShock").animate({"left":"0%"}, "slow");
+					$("#kuka").animate({"left":"0%"}, "slow");
 					setTimeout(function () {
 						$('#bourbon').get(0).play();
 					}, 500);
-					$("#kukaShock").delay(1200).animate({"left":"100%"}, "slow");
+					$("#kuka").delay(5000).animate({"left":"100%"}, "slow");
 				}
 				else if ($selected.find("#i4").length > 0) {
 					$("#kukaSmirk").animate({"left":"0%"}, "slow");
@@ -70,33 +70,26 @@ jQuery(document).ready(function(){
 					}, 500);
 					$("#kuka").delay(2300).animate({"left":"100%"}, "slow");
 				}
-				else if ($selected.find("#i8").length > 0) {
-					$("#kuka").animate({"left":"0%"}, "slow");
-					setTimeout(function () {
-						$('#gin').get(0).play();
-					}, 500);
-					$("#kuka").delay(2300).animate({"left":"100%"}, "slow");
-				}
 				else if ($selected.find("#i9").length > 0) {
-					$("#kuka").animate({"left":"0%"}, "slow");
+					$("#kukaHappy").animate({"left":"0%"}, "slow");
 					setTimeout(function () {
 						$('#orange').get(0).play();
 					}, 500);
-					$("#kuka").delay(1000).animate({"left":"100%"}, "slow");
+					$("#kukaHappy").delay(1000).animate({"left":"100%"}, "slow");
 				}
 				else if ($selected.find("#i10").length > 0) {
-					$("#kukaHappy").animate({"left":"0%"}, "slow");
+					$("#kukaShock").animate({"left":"0%"}, "slow");
 					setTimeout(function () {
 						$('#bacon').get(0).play();
 					}, 500);
-					$("#kukaHappy").delay(1000).animate({"left":"100%"}, "slow");
+					$("#kukaShock").delay(3200).animate({"left":"100%"}, "slow");
 				}
 				else if ($selected.find("#i11").length > 0) {
 					$("#kuka").animate({"left":"0%"}, "slow");
 					setTimeout(function () {
 						$('#cranberry').get(0).play();
 					}, 500);
-					$("#kuka").delay(1000).animate({"left":"100%"}, "slow");
+					$("#kuka").delay(1500).animate({"left":"100%"}, "slow");
 				}
 				else if ($selected.find("#i12").length > 0) {
 					$("#kukaHappy").animate({"left":"0%"}, "slow");
