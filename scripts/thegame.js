@@ -355,6 +355,8 @@ jQuery(document).ready(function(){
 
 	function showValues(form){
 		var fuse = $(".fuse_list").html();
+		var png = '.png';
+		fuse = fuse.split('a.png').join(png);
 		var comboVal = [];
 		$(".fuse_list .ingredient").each(function(i, elem){
 			comboVal[i] = parseInt($(elem).val());

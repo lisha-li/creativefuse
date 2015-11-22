@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'CaviarDreams';
-	src: url('../graphics/Fonts/caviardreams/caviardreams.ttf') format('truetype'),
+	src: url('../graphics/Fonts/caviardreams/caviardreams.ttf') format('truetype');
 }
 
 html, body {
@@ -219,9 +219,9 @@ div[id^="radial_container"] img {
 
 .plus {
 	position: absolute;
-	top: -30%;
+	top: -10%;
 	font-size: 50px;
-	margin-left: -12px;
+	margin-left: -16px;
 }
 
 .ingredient{
@@ -244,12 +244,12 @@ div[id^="radial_container"] img {
 	position: absolute;
 	top: 25%;
 	margin-top: 10px;
-	margin-left: -10px;
+	margin-left: -14px;
 }
 
 #winFuse .plus{
 	position: absolute;
-	top: 0%;
+	top: 24%;
 	margin-top: 10px;
 	margin-left: -12px;
 }
